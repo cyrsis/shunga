@@ -6,6 +6,7 @@ import Feed from '../screens/Feed';
 import Settings from '../screens/Settings';
 import UserDetail from '../screens/UserDetail';
 import Me from '../screens/Me';
+import Explore from "../screens/Explore";
 
 export const FeedStack = StackNavigator({
     Feed: {
@@ -31,7 +32,7 @@ export const Tabs = TabNavigator({
         },
     },
     Me: {
-        screen: Me,
+        screen: Explore,
         navigationOptions: {
             tabBarLabel: 'Artists',
             tabBarIcon: ({tintColor}) => <Icon name="account-circle" size={35} color={tintColor}/>
@@ -54,7 +55,7 @@ export const Tabs = TabNavigator({
     Me2: {
         screen: Me,
         navigationOptions: {
-            tabBarLabel: 'Credits',
+            tabBarLabel: 'Cre',
             tabBarIcon: ({tintColor}) => <Icon name="account-circle" size={35} color={tintColor}/>
         },
     },
