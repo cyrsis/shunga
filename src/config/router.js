@@ -11,7 +11,7 @@ export const FeedStack = StackNavigator({
     Feed: {
         screen: Feed,
         navigationOptions: {
-            title: 'Feed',
+            title: 'About',
         },
     },
     Details: {
@@ -26,14 +26,35 @@ export const Tabs = TabNavigator({
     Feed: {
         screen: FeedStack,
         navigationOptions: {
-            tabBarLabel: 'Feed',
+            tabBarLabel: 'About',
             tabBarIcon: ({tintColor}) => <Icon name="list" size={35} color={tintColor}/>,
         },
     },
     Me: {
         screen: Me,
         navigationOptions: {
-            tabBarLabel: 'Me',
+            tabBarLabel: 'Artists',
+            tabBarIcon: ({tintColor}) => <Icon name="account-circle" size={35} color={tintColor}/>
+        },
+    },
+    Me3: {
+        screen: Me,
+        navigationOptions: {
+            tabBarLabel: 'History',
+            tabBarIcon: ({tintColor}) => <Icon name="account-circle" size={35} color={tintColor}/>
+        },
+    },
+    Me4: {
+        screen: Me,
+        navigationOptions: {
+            tabBarLabel: 'keywords',
+            tabBarIcon: ({tintColor}) => <Icon name="account-circle" size={35} color={tintColor}/>
+        },
+    },
+    Me2: {
+        screen: Me,
+        navigationOptions: {
+            tabBarLabel: 'Credits',
             tabBarIcon: ({tintColor}) => <Icon name="account-circle" size={35} color={tintColor}/>
         },
     },
