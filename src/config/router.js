@@ -7,6 +7,7 @@ import Settings from '../screens/Settings';
 import UserDetail from '../screens/UserDetail';
 import Me from '../screens/Me';
 import Explore from "../screens/Explore";
+import LocationMap from "../screens/Map";
 
 export const FeedStack = StackNavigator({
     Feed: {
@@ -53,9 +54,9 @@ export const Tabs = TabNavigator({
         },
     },
     Me2: {
-        screen: Me,
+        screen: LocationMap,
         navigationOptions: {
-            tabBarLabel: 'Cre',
+            tabBarLabel: 'Credit',
             tabBarIcon: ({tintColor}) => <Icon name="account-circle" size={35} color={tintColor}/>
         },
     },
