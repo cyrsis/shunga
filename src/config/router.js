@@ -68,19 +68,27 @@ export const Tabs = TabNavigator(tabOptions,{
     lazyLoad: true,
     tabBarComponent: TabBarBottom,
     tabBarPosition: 'bottom',
-    indicatorStyle: {
-        backgroundColor: 'transparent'
-    },
-    style: {
-        backgroundColor: 'rgba(22, 22, 22, 0.3)',
-        borderTopWidth: 3,
-        borderTopColor: '#996600',
-        position: 'absolute',
-        left: 0,
-        right: 0,
-        bottom: 0
+    tabBarOptions: {
+        tinColor: '#fff',
+        activeTintColor: '#eee',
+        inactiveTintColor: '#fff',
+        showIcon: true,
+        showLabel: true,
+        lazyLoad: true,
+        upperCaseLabel: false,
+        indicatorStyle: {
+            backgroundColor: 'transparent'
+        },
+        style: {
+            backgroundColor: 'transparent',
+            borderTopWidth: 3,
+            borderTopColor: 'transparent',
+            position: 'absolute',
+            left: 0,
+            right: 0,
+            bottom: 0
+        }
     }
-
 });
 
 export const SettingsStack = StackNavigator({

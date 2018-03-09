@@ -3,20 +3,16 @@ import {Image, ImageBackground, ScrollView, StyleSheet, View} from 'react-native
 import {Tile, List, ListItem, Button, Text} from 'react-native-elements';
 
 
-const remote = 'https://s15.postimg.org/tw2qkvmcb/400px.png';
-
 class About extends Component {
 
     render() {
 
         return (
-            <View>
                 <ImageBackground
                     style={s.backgroundImage}
                     source={require('../../assets/home/background.png')}>
-                    `<Text>hiii</Text>`
+
                 </ImageBackground>
-            </View>
         );
     }
 }
@@ -25,6 +21,8 @@ const s = StyleSheet.create({
     backgroundImage: {
         flex: 1,
         position: 'absolute',
+        width: '100%',
+        height: '100%'
     },
     overlay: {
         position: 'absolute',
