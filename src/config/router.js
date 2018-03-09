@@ -8,6 +8,7 @@ import UserDetail from '../screens/UserDetail';
 import Me from '../screens/Me';
 import Explore from "../screens/Explore";
 import LocationMap from "../screens/Map";
+import DeckScreen from "../screens/DeckScreen";
 
 export const FeedStack = StackNavigator({
     Feed: {
@@ -23,8 +24,7 @@ export const FeedStack = StackNavigator({
         }),
     },
 });
-
-export const Tabs = TabNavigator({
+const tabOptions ={
     Feed: {
         screen: FeedStack,
         navigationOptions: {
@@ -47,7 +47,7 @@ export const Tabs = TabNavigator({
         },
     },
     Me4: {
-        screen: Me,
+        screen: DeckScreen,
         navigationOptions: {
             tabBarLabel: 'keywords',
             tabBarIcon: ({tintColor}) => <Icon name="account-circle" size={35} color={tintColor}/>
@@ -59,10 +59,26 @@ export const Tabs = TabNavigator({
             tabBarLabel: 'Credit',
             tabBarIcon: ({tintColor}) => <Icon name="account-circle" size={35} color={tintColor}/>
         },
-    },
-   }, {
+    }
+}
+export const Tabs = TabNavigator(tabOptions,{
+    animationEnabled: false,
+    swipeEnabled: false,
+    lazyLoad: true,
     tabBarComponent: TabBarBottom,
     tabBarPosition: 'bottom',
+    indicatorStyle: {
+        backgroundColor: 'transparent'
+    },
+    style: {
+        backgroundColor: 'rgba(22, 22, 22, 0.3)',
+        borderTopWidth: 3,
+        borderTopColor: '#996600',
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        bottom: 0
+    }
 
 });
 
