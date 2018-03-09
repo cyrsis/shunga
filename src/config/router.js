@@ -9,6 +9,7 @@ import Me from '../screens/Me';
 import Explore from "../screens/Explore";
 import LocationMap from "../screens/Map";
 import DeckScreen from "../screens/DeckScreen";
+import About from "../screens/About";
 
 export const FeedStack = StackNavigator({
     Feed: {
@@ -26,7 +27,7 @@ export const FeedStack = StackNavigator({
 });
 const tabOptions ={
     Feed: {
-        screen: FeedStack,
+        screen: About,
         navigationOptions: {
             tabBarLabel: 'About',
             tabBarIcon: ({tintColor}) => <Icon name="list" size={35} color={tintColor}/>,
